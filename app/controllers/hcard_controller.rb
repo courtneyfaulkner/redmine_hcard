@@ -1,0 +1,3 @@
+class HCardController < ApplicationController
+
+end

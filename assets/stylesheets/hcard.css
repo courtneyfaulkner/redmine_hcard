@@ -1,0 +1,41 @@
+.vcard, 
+.vevent {
+	border: 2px solid #e0e7b8 !important;
+	padding: 20px 3px 10px 10px !important;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	margin: 5px 0 !important;
+	width: 400px;
+}
+
+span.vcard, 
+span.vevent {
+	padding: 2px 1px 2px 70px !important;
+	margin: 0 2px 0 !important;
+}
+
+.url {
+	margin: 0 2px 0 0 !important;
+}
+.email {
+	margin: 0 2px 0 0 !important;
+	display: block;
+}
+
+.fn {
+	font-weight: bold;
+}
+
+.title {
+	font-style: italics;
+}
+ 
+/* images have to be saved as data URIs as usercontent doesn't support local images */
+
+.vcard {
+	background:#f8f8ec url("../images/contact.gif") 5px 2px no-repeat !important;
+}
+
+.vevent {
+	background:#f8f8ec url("../images/contact.gif") 5px 2px no-repeat !important;
+}
