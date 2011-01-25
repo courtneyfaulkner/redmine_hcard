@@ -27,6 +27,7 @@ Redmine::Plugin.register :redmine_hcard do
         yim = user.custom_values.select{|cv| cv.custom_field.name.casecmp("yim") == 0}.first.value rescue nil
         msn = user.custom_values.select{|cv| cv.custom_field.name.casecmp("msn") == 0}.first.value rescue nil
         gtalk = user.custom_values.select{|cv| cv.custom_field.name.casecmp("gtalk") == 0}.first.value rescue nil
+        skype = user.custom_values.select{|cv| cv.custom_field.name.casecmp("skype") == 0}.first.value rescue nil
         "<div id=\"hcard-#{user.login}\" class=\"vcard\"><span class=\"fn\">#{user.firstname} #{user.lastname}</span>" +
         (title.nil? || title.empty? ? "" : ", <span class=\"title\">#{title}</span>") +
         (org.nil? || org.empty? ? "" : "<div class=\"org\">#{org}</div>") +
@@ -37,6 +38,7 @@ Redmine::Plugin.register :redmine_hcard do
         (yim.nil? || yim.empty? ? "" : "<a class=\"url\" href=\"ymsgr:sendIM?#{yim}\">YIM</a>") +
         (msn.nil? || msn.empty? ? "" : "<a class=\"url\" href=\"msnim:chat?contact=#{msn}\">MSN</a>") +
         (gtalk.nil? || gtalk.empty? ? "" : "<a class=\"url\" href=\"xmpp:#{gtalk}\">GTalk</a>") +
+        (skype.nil? || skype.empty? ? "" : "<a class=\"url\" href=\"skype:#{skype}\">Skype</a>") +
         (schedule.nil? || schedule.empty? ? "" : "<div class=\"schedule\">schedule: #{schedule}</div>") +
         (vacation.nil? || vacation.empty? ? "" : "<div class=\"vacation\">vacation: #{vacation}</div>") +
         "</div>"

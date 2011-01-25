@@ -13,6 +13,7 @@ Currently, the macro is hard-coded to support the built-in first name, last name
 * yim
 * msn
 * gtalk
+* skype
 
 # Planned Improvements
 
